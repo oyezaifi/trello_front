@@ -1,0 +1,240 @@
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+  }
+.signup-container  {
+    background-color: #faf5f0;
+    height: 150vh !important; 
+}
+.auth-form {
+    margin: 0 auto;
+    display: flex;
+    width: 40%;
+    padding: 40px;
+    animation: bounce-in 0.6s ease-out forwards;
+    flex-direction: column;
+}
+  .signup-container h1 {
+    margin-bottom: 10px;
+    /* color:  #262626; */
+    color: #a86e3b;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 38px;
+    font-weight: 600;
+    line-height: normal;
+}
+.signup-container span {
+    margin:10px auto 40px;
+    display: block;
+    max-width: 500px;
+    /* color: #4C4C4D; */
+    color: #a86e3b;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+ .signup-container label {
+    margin-bottom: 10px;
+    /* color:  #262626; */
+    color: #a86e3b;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px; 
+}
+ .signup-container input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 20px ;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #FCFCFD;
+    color:  #656567;
+    font-family: 'Poppins';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    border: none;
+
+}
+.signup-container .submitbtn {
+    width: 100%;
+    color:  #fff;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px ;
+    padding: 14px 20px;
+    border-radius: 8px;
+    background-color: #a86e3be8;
+    border: 1px solid #fff;
+}
+.submitbtn:hover {
+    cursor: pointer;
+    background-color: #a86e3b;
+    border: 1px solid #FCFCFD;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+}
+.signup-container form  .redirect {
+    /* color:  #262626; */
+    color: #a86e3b;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 16px;
+    line-height: 24px; 
+    font-weight: 400;
+}
+.login-link {
+    position: relative;
+    margin:0 10px;
+    color:  #262626;
+    font-family: "Poppins";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.choice {
+    margin: 24px 15px!important;
+    position: relative;
+    color: #E4E4E7;
+}
+.choice::after {
+    content: "";
+    position: absolute;
+    right: 0%;
+    bottom: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #E4E4E7;
+}
+.choice::before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #E4E4E7;
+}
+
+.arrow-icon {
+    position: absolute;
+    top: 16%;
+    left: 100%;
+    font-size: 18px;
+}
+/* login css */
+.forgotpassword {
+    margin-bottom: 20px;
+    text-align: end;
+    color:  #4C4C4D;
+    font-family: "Poppins";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+.password {
+     position: relative;
+}
+.password .eye-icon {
+    position: absolute;
+    font-size: 24px;
+    right: 3%;
+    top: 20%;
+    color : #4C4C4D;
+    cursor: pointer;
+}
+#showerror {
+    visibility: visible;
+}
+#hide {
+    visibility: hidden;
+}
+.password-error {
+    display: inline-block;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    text-wrap: balance;
+    color: red !important;
+    font-family: 'Poppins';
+    font-weight: 400;
+    margin: 0 0  10px 10px;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 1440px) {
+   
+.signup-container h1 {
+    font-size: 32px;
+    line-height: 48px;
+}
+.signup-container form  .redirect {
+    font-size: 16px;
+    line-height: 20px; 
+}
+}
+@media (max-width: 1024px) {
+    .auth-form {
+        width :50% ;
+        padding: 0;
+    }
+   
+    .signup-container h1 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .signup-container form  .redirect {
+        font-size: 14px;
+        line-height: 20px; 
+    }
+    .signup-container label {
+        font-size: 14px;
+        line-height: 20px; 
+    }
+    .signup-container input {
+        font-size: 14px;
+        line-height: 20px; 
+    }
+    .signup-container .submitbtn {
+        font-size: 14px;
+        line-height: 20px; 
+    }
+    .login-link {
+        font-size: 14px;
+        line-height: 20px; 
+    }
+    .choice {
+        font-size: 14px;
+        line-height: 20px; 
+    }
+}
+@media (max-width: 768px) {
+    .auth-form {
+        width :60% ;
+    }}
+@media (max-width: 600px) {
+    .auth-form {
+        width :70% ;
+    }
+    .signup-container h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .signup-container form  .redirect {
+        font-size: 12px;
+        line-height: 20px; 
+    }
+    .signup-container .submitbtn {
+        font-size: 12px;
+        line-height: 20px; 
+    }
+    
+}
