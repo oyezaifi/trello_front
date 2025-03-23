@@ -1,12 +1,22 @@
 import axios from "axios";
-const API = axios.create({
-  baseURL: "https://reveify-mernapp.onrender.com/api",
-  // baseURL: "http://localhost:5000/api", // url to Run on LocalHost
-  withCredentials: true,
+
+const api = axios.create({
+  baseURL: "http://localhost:5000/api",
   headers: {
     "Content-Type": "application/json",
-    Accept: "application/json",
   },
 });
 
-export default API;
+// Add request interceptor for auth token
+api.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("userToken");
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+export default api;
